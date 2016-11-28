@@ -1,5 +1,6 @@
-myos.iso: kernel isodir/boot/grub/grub.cfg
+myos.iso: kernel
 	cp src/myos.bin isodir/boot/myos.bin
+	cp src/grub.cfg isodir/boot/grub/grub.cfg
 	grub2-mkrescue -o myos.iso isodir
 
 .PHONY: kernel
